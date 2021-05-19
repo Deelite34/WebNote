@@ -1,6 +1,10 @@
 # WebNote
 Django rest api site providing api for simple operations on short texts, such as GET, POST, PUT, DELETE  
 
+# Website
+Project is deployed and accepts requests on webpage https://web-note-project.herokuapp.com/api/ 
+Use `a92e242f925461a50d852dee5ba83371ce721c19` token for authenticated operations.
+
 ## Installation
 create virtual environment `python -m venv venv_zakop_app`  
 launch virtual environment `.\venv_zakop_app\scripts\activate` (powershell command)  
