@@ -4,6 +4,7 @@ Django rest api site providing api for simple operations on short texts, such as
 # Website
 Project is deployed and accepts requests on webpage https://web-note-project.herokuapp.com/api/ 
 Use `a92e242f925461a50d852dee5ba83371ce721c19` token for authenticated operations.
+Requests can be sent for example using [Postman application](https://www.postman.com/)
 
 ## Installation
 create virtual environment `python -m venv venv_zakop_app`  
