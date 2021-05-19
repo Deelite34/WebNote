@@ -1,6 +1,7 @@
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import redirect
 from django.db.models import F
+from rest_framework.parsers import JSONParser
 from rest_framework.decorators import api_view
 from rest_framework.decorators import authentication_classes, permission_classes
 from rest_framework.authentication import TokenAuthentication
@@ -70,6 +71,9 @@ def auth_api_list(request):
         serializer = NoteSerializer(notes, many=True)
         return JsonResponse(serializer.data, safe=False)
     if request.method == 'POST':
+        #print(JSONParser(request.data))
+        if len(request.data['content']) == 0:
+            return Response("Message cannot be empty", status=status.HTTP_400_BAD_REQUEST)
         serializer = NoteSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
@@ -102,6 +106,8 @@ def auth_api_detail(request, pk):
         return JsonResponse(serializer.data, safe=False)
     elif request.method == 'PUT':
         serializer = NoteSerializer(note, data=request.data)
+        if len(request.data['content']) == 0:
+            return Response("Message cannot be empty", status=status.HTTP_400_BAD_REQUEST)
         if serializer.is_valid():
             note.views_count = 0  # Updated note will have its views count reset to 0
             note.save()
