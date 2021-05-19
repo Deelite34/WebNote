@@ -1,7 +1,4 @@
-# Show Current User
-
-Get the details of the currently Authenticated User along with basic
-subscription information.
+# Get all available notes.
 
 **URL** : `/api/`
 
@@ -33,4 +30,30 @@ the first GET request would result with response:
         "views_count": 1
     }
 ]
+```
+
+# Get specific note
+
+**URL** : `/api/:pk/`
+
+**Method** : `GET`
+
+**Auth required** : NO
+
+**Permissions required** : None
+
+## Success Response
+
+**Code** : `200 OK`
+
+**Content examples**
+
+Requesting only second note results in response:
+
+```json
+{
+        "id": 2,
+        "content": "another note",
+        "views_count": 1
+}
 ```
