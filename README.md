@@ -19,19 +19,18 @@ To run tests, enter `python manage.py test api.test`
 
 
 Open endpoints require no Authentication.
-
-* API : `GET /api/` - Get all available notes
-* API : `GET /api/:pk/` - Get specific Note
+* [GET](examples/API%20endpoints.md) : `GET /api/` - Get all available notes
+* [GET](examples/API%20endpoints.md) : `GET /api/:pk/` - Get specific Note
 
 ## Endpoints that require Authentication
 
 Closed endpoints require a valid Token to be included in the header of the
 request. A Token can be acquired by generating it in admin panel.
 ### Operations on unspecified note
-*  AUTH : `GET /auth/`
-*  AUTH : `POST /auth/`
+*  [GET](examples/AUTH%20endpoints.md) : `GET /auth/`
+*  [POST](examples/AUTH%20endpoints.md) : `POST /auth/`
 
 ### Operations on specific Notes
-*  AUTH : `GET /auth/:pk/`
-*  AUTH : `PUT /auth/:pk/`
-*  AUTH : `DELETE /auth/:pk/`
+*  [GET](examples/AUTH%20endpoints.md) : `GET /auth/:pk/`
+*  [PUT](examples/AUTH%20endpoints.md) : `PUT /auth/:pk/`
+*  [DELETE](examples/AUTH%20endpoints.md) : `DELETE /auth/:pk/`
