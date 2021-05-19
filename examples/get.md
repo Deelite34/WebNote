@@ -21,14 +21,16 @@ With 2 notes being present in the database, with first having id=1 and second ha
 the first GET request would result with response:
 
 ```json
-{
-    "id": 1,
-    "content": "base post note",
-    "views_count": 1
-},
-{
-    "id": 2,
-    "content": "another note",
-    "views_count": 1
-}
+[
+    {
+        "id": 1,
+        "content": "base post note",
+        "views_count": 1
+    },
+    {
+        "id": 2,
+        "content": "another note",
+        "views_count": 1
+    }
+]
 ```
