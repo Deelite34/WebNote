@@ -3,7 +3,7 @@ Django rest api site providing api for simple operations on short texts, such as
 
 # Website
 Project is deployed and accepts requests on webpage https://web-note-project.herokuapp.com/api/ 
-Use `a92e242f925461a50d852dee5ba83371ce721c19` token for authenticated operations.
+Use `a92e242f925461a50d852dee5ba83371ce721c19` token for authenticated operations.  
 Requests can be sent for example using [Postman application](https://www.postman.com/)
 
 ## Installation
@@ -11,7 +11,7 @@ create virtual environment `python -m venv venv_zakop_app`
 launch virtual environment `.\venv_zakop_app\scripts\activate` (powershell command)  
 Install required modules `pip install -r requirements.txt`  
 Create database `python manage.py migrate`  
-Create super user `python manage.py createsuperuser`
+Create super user `python manage.py createsuperuser`  
 Run server `python manage.py runserver`  
 Log in as super user in /admin/ and generate token to be used for requests requiring authorisation  
 Add TOKEN to request headers containing key - "Authorization" and value - "token TOKEN" (replace TOKEN with your token)  
