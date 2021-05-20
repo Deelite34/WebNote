@@ -7,8 +7,8 @@ Add header with key`Authorization` and key  `token a92e242f925461a50d852dee5ba83
 Requests can be sent for example using [Postman application](https://www.postman.com/)  
 
 ## Installation
-create virtual environment `python -m venv venv_zakop_app`  
-launch virtual environment `.\venv_zakop_app\scripts\activate` (powershell command)  
+create virtual environment `python -m venv web_note_venv`  
+launch virtual environment `.\web_note_venv\scripts\activate` (powershell command)  
 Install required modules `pip install -r requirements.txt`  
 Create database `python manage.py migrate`  
 Create super user `python manage.py createsuperuser`  
@@ -20,14 +20,13 @@ Add TOKEN to request headers containing key - "Authorization" and value - "token
 Tests cover all request method views, as well as redirection from base directory to /api/
 To run tests, enter `python manage.py test api.test`
 
-## Open Endpoints
-
+# Open Endpoints
 
 Open endpoints require no Authentication.
 * [GET](examples/API%20endpoints.md) : `GET /api/` - Get all available notes
 * [GET](examples/API%20endpoints.md) : `GET /api/:pk/` - Get specific Note
 
-## Endpoints that require Authentication
+# Endpoints that require Authentication
 
 Closed endpoints require a valid Token to be included in the header of the
 request. A Token can be acquired by generating it in admin panel.
