@@ -1,13 +1,11 @@
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import redirect
 from django.db.models import F
-from rest_framework.parsers import JSONParser
-from rest_framework.decorators import api_view
-from rest_framework.decorators import authentication_classes, permission_classes
+from rest_framework import status
+from rest_framework.decorators import api_view, authentication_classes, permission_classes
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
-from rest_framework import status
 from .models import Note
 from .serializers import NoteSerializer
 
@@ -71,7 +69,6 @@ def auth_api_list(request):
         serializer = NoteSerializer(notes, many=True)
         return JsonResponse(serializer.data, safe=False)
     if request.method == 'POST':
-        #print(JSONParser(request.data))
         if len(request.data['content']) == 0:
             return Response("Message cannot be empty", status=status.HTTP_400_BAD_REQUEST)
         serializer = NoteSerializer(data=request.data)

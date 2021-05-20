@@ -1,6 +1,4 @@
-from django.contrib import admin
-from django.urls import path, include
-from rest_framework import routers
+from django.urls import path
 from .views import api_list, api_retrieve, auth_api_list, auth_api_detail, redirect_to_api
 
 
