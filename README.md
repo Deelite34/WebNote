@@ -16,7 +16,7 @@ Run server `python manage.py runserver`
 Log in as super user in /admin/ and generate token to be used for requests requiring authorisation  
 Add TOKEN to request headers containing key - "Authorization" and value - "token TOKEN" (replace TOKEN with your token)  
 
-# Tests
+# Unit tests
 Tests cover all request method views, as well as redirection from base directory to /api/
 To run tests, enter `python manage.py test api.test`
 
