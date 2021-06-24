@@ -21,16 +21,19 @@ Tests cover all request method views, as well as redirection from base directory
 To run tests, enter `python manage.py test api.test`
 
 # Open Endpoints
-
+Detailed documentation on public endpoints can be found [HERE](examples/API%20endpoints.md)  
 Open endpoints require no Authentication.
 * [GET](examples/API%20endpoints.md) : `GET /api/` - Get all available notes
 * [GET](examples/API%20endpoints.md) : `GET /api/:pk/` - Get specific Note
 
 # Endpoints that require Authentication
-
+Detailed documentation on public endpoints can be found [HERE](examples/AUTH%20endpoints.md)  
 Closed endpoints require a valid Token to be included in the header of the
-request. A Token can be acquired by generating it in admin panel.
+request.  
+A Token can be acquired by generating it in admin panel.
+
 ### Operations on unspecified note
+
 *  [GET](examples/AUTH%20endpoints.md) : `GET /auth/`
 *  [POST](examples/AUTH%20endpoints.md) : `POST /auth/`
 
