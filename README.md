@@ -27,7 +27,7 @@ Open endpoints require no Authentication.
 * [GET](examples/API%20endpoints.md) : `GET /api/:pk/` - Get specific Note
 
 # Endpoints that require Authentication
-Detailed documentation on public endpoints can be found [HERE](examples/AUTH%20endpoints.md)  
+Detailed documentation on endpoints requiring authorisation can be found [HERE](examples/AUTH%20endpoints.md)  
 Closed endpoints require a valid Token to be included in the header of the
 request.  
 A Token can be acquired by generating it in admin panel.
