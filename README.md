@@ -2,9 +2,10 @@
 Django rest api site providing api for simple operations on short texts, such as GET, POST, PUT, DELETE  
 
 # Website
-Project is deployed and accepts requests on webpage https://web-note-project.herokuapp.com/api/  
+<s>Project is deployed and accepts requests on webpage https://web-note-project.herokuapp.com/api/  
 Add header with key`Authorization` and key  `token a92e242f925461a50d852dee5ba83371ce721c19` to use `/auth/` api  
-Requests can be sent for example using [Postman application](https://www.postman.com/)  
+Requests can be sent for example using [Postman application](https://www.postman.com/)  </s>  
+Live preview on heroku shut down to make space for other projects.  
 
 ## Installation
 create virtual environment `python -m venv web_note_venv`  
